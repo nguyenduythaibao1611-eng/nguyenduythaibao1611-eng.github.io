@@ -1,40 +1,89 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="vi">
 <head>
-  <title>My Site</title>
+  <title>Trang Cá Nhân Của Tôi</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-  <style>
-    body,
-    h1 {
-      font-family: "Raleway", sans-serif
-    }
+  <link rel="stylesheet" href="/src/css/style.css">
+  <meta name="title" content="Bao's Site">
+  <meta name="description" content="Hi, my name is Bao Nguyen. I'm the Web Developer.">
+  <meta name="keywords" content="web, fullstack developer">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="author" content="Thai Bao Nguyen Duy">
 
-    body,
-    html {
-      height: 100%
-    }
-
-    .bgimg {
-      background-image: url('https://images.unsplash.com/photo-1515256722043-0f2b082ddadc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80');
-      min-height: 100%;
-      background-position: center;
-      background-size: cover;
-    }
-  </style>
 </head>
 
 <body>
-  <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-    <div class="w3-display-topleft w3-padding-large w3-xlarge">
-      Logo
+  <section class="banner min-h-screen w-full flex flex-col justify-center items-center bg-[url('/banner.avif')] bg-cover bg-center">
+    <div class="banner__content w-full lg:w-[80%] p-12 text-gray-800">
+      <h1 class="banner__title text-6xl font-bold mb-10 grid grid-col-1 lg:gap-5">
+        <span>Chào bạn, tôi là <span class="text-teal-400 font-extrabold">Nguyễn Duy Thái Bảo</span></span>
+        <span class="text-gray-800">Một Nhà Phát Triển Web sáng tạo.</span>
+      </h1>
+      <a href="#about-me" class="banner__btn uppercase border-2 border-teal-400 p-3 hover:bg-teal-400 hover:text-white transition-all cursor-pointer">
+        <span class="text-xl px-8 py-3 font-light">Tìm hiểu thêm</span>
+      </a>
     </div>
-    <div class="w3-display-middle">
-      <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
+  </section>
+
+  <section id="about-me" class="about bg-teal-400 min-h-screen w-full flex flex-col justify-center items-center p-4 lg:p-12 text-white">
+    <div class="about__container w-full lg:w-[60%] mb-5">
+      <h2 class="about__heading uppercase text-2xl lg:text-5xl text-center font-bold text-white mb-12">Về Tôi</h2>
+      <div class="grid grid-cols-1 gap-2 lg:grid-cols-3 lg:gap-3">
+        <div class="about__avatar-wrapper flex justify-center items-center text-center col-span-1">
+          <img class="about__img object-cover max-w-xs lg:w-auto rounded-full border-4 border-white" src="/imgs/vite.svg" title="Avatar" alt="My avatar" />
+        </div>
+        <div class="about__text-content col-span-1 lg:col-span-2 flex justify-center items-center">
+          <div class="p-0 text-center lg:p-8 lg:text-start">
+            <p class="about__description pb-3 text-lg font-light mb-5">
+              Tôi đam mê lập trình và xây dựng những sản phẩm công nghệ thực tế. Mục tiêu của tôi là trở thành một kỹ sư phần mềm chuyên nghiệp, làm chủ các công nghệ hiện đại.
+            </p>
+            <a href="#" target="_blank" class="about__cv-btn uppercase border-2 border-white p-3 text-white hover:bg-white hover:text-teal-400 transition-colors">
+              <span class="text-xl px-8 py-3 font-normal">Xem CV của tôi</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section id="contact" class="contact bg-white min-h-[500px] w-full flex flex-col justify-center items-center p-6 lg:p-12 text-gray-800">
+    <div class="contact__container w-full lg:w-[60%] mb-5 text-center">
+      <h2 class="contact__heading uppercase text-2xl lg:text-5xl font-bold mb-6">Liên Hệ</h2>
+      <p class="contact__text py-5">
+        <span class="text-2xl text-teal-500 mb-3 block">RẤT VUI ĐƯỢC HỢP TÁC VỚI BẠN</span>
+        <span>Hãy gửi email cho tôi nếu bạn có bất kỳ dự án nào cần triển khai!</span>
+      </p>
+    </div>
+    <a href="mailto:nguyenduythaibao1611@gmail.com" class="contact__email-btn border-2 border-teal-400 px-8 py-3 bg-teal-400 text-white hover:bg-white hover:text-teal-400 transition-all">
+      <span class="text-xl uppercase font-light">Gửi Email Ngay</span>
+    </a>
+  </section>
+
+  <footer class="footer bg-neutral-900 min-h-[300px] pt-12 pb-12 flex flex-col justify-center items-center">
+    <ul class="footer__social-list flex flex-row list-none p-0">
+      <li class="px-4 cursor-pointer transition-transform hover:-translate-y-2">
+        <a href="https://twitter.com/[ID_CỦA_BẠN]" target="_blank">
+          <img class="w-10 grayscale hover:grayscale-0" src="/imgs/twitter.svg" alt="Twitter" />
+        </a>
+      </li>
+      <li class="px-4 cursor-pointer transition-transform hover:-translate-y-2">
+        <a href="https://linkedin.com/in/nguyenduythaibao" target="_blank">
+          <img class="w-10 grayscale hover:grayscale-0" src="/imgs/linkedin.svg" alt="Linkedin" />
+        </a>
+      </li>
+      <li class="px-4 cursor-pointer transition-transform hover:-translate-y-2">
+        <a href="https://github.com/nguyenduythaibao1611-eng/nguyenduythaibao1611-eng.github.io.git" target="_blank">
+          <img class="w-10 grayscale hover:grayscale-0" src="/imgs/github.svg" alt="Github" />
+        </a>
+      </li>
+    </ul>
+    <hr class="w-1/4 border-gray-500 mt-10"/>
+    <p class="footer__copyright text-lg text-gray-500 mt-5">24020015 - Nguyễn Duy Thái Bảo</p>
+  </footer>
+
+  <script type="module" src="/src/scripts/application.js"></script>
 </body>
 </html>
